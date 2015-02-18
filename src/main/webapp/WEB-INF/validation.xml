@@ -61,5 +61,25 @@
                 <arg key="user.password"/>
             </field>
         </form>
+        <form name="salcodeMst">
+            <field property="PA_SLCM_SALCODE" depends="required">
+                <arg key="salcodeMst.PA_SLCM_SALCODE"/>
+            </field>
+            <field property="PA_SLCM_SALDESC" depends="required">
+                <arg key="salcodeMst.PA_SLCM_SALDESC"/>
+            </field>
+            <field property="PA_SLCM_SHRTNAME" depends="required">
+                <arg key="salcodeMst.PA_SLCM_SHRTNAME"/>
+            </field>
+            <field property="PA_SLCM_SALTYPE" depends="required">
+                <arg key="salcodeMst.PA_SLCM_SALTYPE"/>
+            </field>
+            <field property="PA_SLCM_REGCODE" depends="required">
+                <arg key="salcodeMst.PA_SLCM_REGCODE"/>
+            </field>
+            <field property="PA_SLCM_STATUS" depends="required">
+                <arg key="salcodeMst.PA_SLCM_STATUS"/>
+            </field>
+        </form>
     </formset>
 </form-validation>
