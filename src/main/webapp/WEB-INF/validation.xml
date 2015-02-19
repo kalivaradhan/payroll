@@ -62,9 +62,6 @@
             </field>
         </form>
         <form name="salcodeMst">
-            <field property="PA_SLCM_SALCODE" depends="required">
-                <arg key="salcodeMst.PA_SLCM_SALCODE"/>
-            </field>
             <field property="PA_SLCM_SALDESC" depends="required">
                 <arg key="salcodeMst.PA_SLCM_SALDESC"/>
             </field>
@@ -73,6 +70,30 @@
             </field>
             <field property="PA_SLCM_SALTYPE" depends="required">
                 <arg key="salcodeMst.PA_SLCM_SALTYPE"/>
+            </field>
+            <field property="PA_SLCM_PERIOD" depends="required">
+                <arg key="salcodeMst.PA_SLCM_PERIOD"/>
+            </field>
+            <field property="PA_SLCM_SALCAT" depends="required">
+                <arg key="salcodeMst.PA_SLCM_SALCAT"/>
+            </field>
+            <field property="PA_SLCM_PRORATA" depends="required">
+                <arg key="salcodeMst.PA_SLCM_PRORATA"/>
+            </field>
+            <field property="PA_SLCM_ITTAXBL" depends="required">
+                <arg key="salcodeMst.PA_SLCM_ITTAXBL"/>
+            </field>
+            <field property="PA_SLCM_CCEMPJVTAG" depends="required">
+                <arg key="salcodeMst.PA_SLCM_CCEMPJVTAG"/>
+            </field>
+            <field property="PA_SLCM_ITPJTN" depends="required">
+                <arg key="salcodeMst.PA_SLCM_ITPJTN"/>
+            </field>
+            <field property="PA_SLCM_REGSLOT" depends="required">
+                <arg key="salcodeMst.PA_SLCM_REGSLOT"/>
+            </field>
+            <field property="PA_SLCM_REGSLOT_TITL" depends="required">
+                <arg key="salcodeMst.PA_SLCM_REGSLOT_TITL"/>
             </field>
             <field property="PA_SLCM_REGCODE" depends="required">
                 <arg key="salcodeMst.PA_SLCM_REGCODE"/>

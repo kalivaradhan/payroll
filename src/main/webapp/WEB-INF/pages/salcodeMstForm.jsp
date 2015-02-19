@@ -16,7 +16,7 @@
 <div class="col-sm-7">
 	<form:errors path="*" cssClass="alert alert-danger alert-dismissable" element="div"/>
 	<form:form commandName="salcodeMst" name="salcodeMst" action="salcodeMstForm" method="post"
-	    cssClass="well">
+	    cssClass="well" onsubmit="return validateSalcodeMst(this);">
 	<input type="hidden" name="isNew"
 	    value="${(not empty salcodeMst.PA_SLCM_SALCODE && salcodeMst.PA_SLCM_SALCODE != '0') ? 'false' : 'true'}"/>
 	
@@ -25,7 +25,7 @@
     </spring:bind>
         <appfuse:label styleClass="control-label" key="salcodeMst.PA_SLCM_SALCODE"/>
         <form:input name="PA_SLCM_SALCODE" path="PA_SLCM_SALCODE" id="PA_SLCM_SALCODE"
-            maxlength="50" autofocus="true" cssClass="form-control"/>
+            maxlength="50" cssClass="form-control" readonly="true"/>
         <form:errors path="PA_SLCM_SALCODE" cssClass="help-block"/>
     </div>
     <spring:bind path="salcodeMst.PA_SLCM_SALDESC">
@@ -33,14 +33,14 @@
     </spring:bind>
         <appfuse:label styleClass="control-label" key="salcodeMst.PA_SLCM_SALDESC"/>
         <form:input name="PA_SLCM_SALDESC" path="PA_SLCM_SALDESC" id="PA_SLCM_SALDESC"
-            maxlength="50" cssClass="form-control"/>
+            maxlength="50" autofocus="true" cssClass="form-control"/>
         <form:errors path="PA_SLCM_SALDESC" cssClass="help-block"/>
     </div>
     <spring:bind path="salcodeMst.PA_SLCM_SHRTNAME">
     <div class="form-group${(not empty status.errorMessage) ? ' has-error' : ''}">
     </spring:bind>
         <appfuse:label styleClass="control-label" key="salcodeMst.PA_SLCM_SHRTNAME"/>
-        <form:inputt name="PA_SLCM_SHRTNAME" path="PA_SLCM_SHRTNAME" id="PA_SLCM_SHRTNAME"
+        <form:input name="PA_SLCM_SHRTNAME" path="PA_SLCM_SHRTNAME" id="PA_SLCM_SHRTNAME"
             maxlength="50" cssClass="form-control"/>
         <form:errors path="PA_SLCM_SHRTNAME" cssClass="help-block"/>
     </div>
@@ -142,7 +142,7 @@
     </spring:bind>
         <appfuse:label styleClass="control-label" key="salcodeMst.PA_SLCM_REGCODE"/>
         <form:input path="PA_SLCM_REGCODE" id="PA_SLCM_REGCODE" maxlength="50"
-            cssClass="form-control"/>
+             name="PA_SLCM_REGCODE" cssClass="form-control"/>
         <form:errors path="PA_SLCM_REGCODE" cssClass="help-block"/>
     </div>
 	<spring:bind path="salcodeMst.PA_SLCM_REGSLOT">
@@ -150,7 +150,7 @@
     </spring:bind>
         <appfuse:label styleClass="control-label" key="salcodeMst.PA_SLCM_REGSLOT"/>
         <form:input path="PA_SLCM_REGSLOT" id="PA_SLCM_REGSLOT" maxlength="50"
-            cssClass="form-control"/>
+            name="PA_SLCM_REGSLOT" cssClass="form-control"/>
         <form:errors path="PA_SLCM_REGSLOT" cssClass="help-block"/>
     </div>
 	<spring:bind path="salcodeMst.PA_SLCM_REGSLOT_TITL">
@@ -158,7 +158,7 @@
     </spring:bind>
         <appfuse:label styleClass="control-label" key="salcodeMst.PA_SLCM_REGSLOT_TITL"/>
         <form:input path="PA_SLCM_REGSLOT_TITL" id="PA_SLCM_REGSLOT_TITL" maxlength="50"
-            cssClass="form-control"/>
+            name="PA_SLCM_REGSLOT_TITL" cssClass="form-control"/>
         <form:errors path="PA_SLCM_REGSLOT_TITL" cssClass="help-block"/>
     </div>
     

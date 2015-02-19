@@ -16,6 +16,9 @@
             <Item name="Employee" title="menu.employee" description="Employee List" page="/employees" roles="ROLE_ADMIN,ROLE_USER"/>
             <Item name="SalcodeMst" title="menu.salaryElement" description="Salary Element List" page="/salcodeMstList" roles="ROLE_ADMIN,ROLE_USER"/>
         </Menu>
+        <Menu name="Transactions" title="menu.transactions" description="Transaction Details" roles="ROLE_ADMIN,ROLE_USER">
+            <Item name="Attendance" title="menu.attendance" description="Attendance List" page="/attendanceTxn" roles="ROLE_ADMIN,ROLE_USER"/>
+        </Menu>
         <Menu name="Logout" title="user.logout" page="/logout" roles="ROLE_ADMIN,ROLE_USER"/>
     </Menus>
 </MenuConfig>

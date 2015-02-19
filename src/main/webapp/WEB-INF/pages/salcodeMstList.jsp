@@ -5,9 +5,9 @@
     <title>:::salary Master:::</title>
     <meta name="menu" content="Master"/>
     <script type="text/javascript">
-        var salType = {"E":"E-Earnings", "D";"D-Deductions"};
-        var regCode = {"E":"E-Earnings", "D";"D-Deductions"};
-        var status = {"A":"A-Active", "I";"I-Inactive"};
+        var salType = {"E":"E-Earnings", "D":"D-Deductions"};
+        var regCode = {"E":"E-Earnings", "D":"D-Deductions"};
+        var status = {"A":"A-Active", "I":"I-Inactive"};
     </script>
 </head>
 <div class="col-sm-10">
@@ -27,27 +27,30 @@
             titleKey="Code" media="html" paramId="PA_SLCM_SALCODE" paramProperty="PA_SLCM_SALCODE"/>
         <display:column property="PA_SLCM_SALDESC" sortable="true" titleKey="Desc"/>
         <display:column property="PA_SLCM_SHRTNAME" sortable="true" titleKey="Short Name"/>
-        <display:column sortable="true" titleKey="Salary Type">
+        <display:column property="PA_SLCM_SALTYPE" sortable="true" titleKey="Salary Type">
             <script type="text/javascript">
-                var PA_SLCM_SALTYPE = salType.[${salcodeMstList.PA_SLCM_SALTYPE}];
-                alert(PA_SLCM_SALTYPE);
-                document.getElementById("PA_SLCM_SALTYPE").html = PA_SLCM_SALTYPE;
+                var PA_SLCM_SALTYPE = salType["${salcodeMstList.PA_SLCM_SALTYPE}"];
+                var PA_SLCM_SALTYPE_ID = "PA_SLCM_SALTYPE_"+${salcodeMstList.PA_SLCM_SALCODE};
+                console.log(document.getElementById(PA_SLCM_SALTYPE_ID));
+                if(null != document.getElementById(PA_SLCM_SALTYPE_ID) && undefined != document.getElementById(PA_SLCM_SALTYPE_ID)){
+                	document.getElementById(PA_SLCM_SALTYPE_ID).innerHTML = PA_SLCM_SALTYPE;
+ 				}
             </script>
-            <div id="PA_SLCM_SALTYPE"></div>
+            <div id=PA_SLCM_SALTYPE_${salcodeMstList.PA_SLCM_SALCODE}> </div>
         </display:column>
-        <display:column sortable="true" titleKey="Reg Code">
+        <display:column property="PA_SLCM_REGCODE" sortable="true" titleKey="Reg Code">
             <script type="text/javascript">
-                var PA_SLCM_REGCODE = regCode.[${salcodeMstList.PA_SLCM_REGCODE}];
+                /*var PA_SLCM_REGCODE = regCode.[${salcodeMstList.PA_SLCM_REGCODE}];
                 alert(PA_SLCM_REGCODE);
-                document.getElementById("PA_SLCM_REGCODE").html = PA_SLCM_REGCODE;
+                document.getElementById("PA_SLCM_REGCODE").html = PA_SLCM_REGCODE;*/
             </script>
             <div id="PA_SLCM_REGCODE"></div>
         </display:column>
-        <display:column sortable="true" titleKey="Status">
+        <display:column property="PA_SLCM_STATUS" sortable="true" titleKey="Status">
             <script type="text/javascript">
-                var PA_SLCM_STATUS = status.[${salcodeMstList.PA_SLCM_STATUS}];
+                /*var PA_SLCM_STATUS = status.[${salcodeMstList.PA_SLCM_STATUS}];
                 alert(PA_SLCM_STATUS);
-                document.getElementById("PA_SLCM_STATUS").html = PA_SLCM_STATUS;
+                document.getElementById("PA_SLCM_STATUS").html = PA_SLCM_STATUS;*/
             </script>
             <div id="PA_SLCM_STATUS"></div>
         </display:column>
