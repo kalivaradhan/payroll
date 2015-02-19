@@ -113,7 +113,6 @@ public class SalcodeMstDaoImpl extends GenericDaoHibernate<SalcodeMst, Integer> 
        Connection con = null;
        PreparedStatement ps = null;
        ResultSet rs = null;
-       System.out.println("Salcode 1");
        try{
            con = dataSource.getConnection();
            ps = con.prepareStatement(SQL);

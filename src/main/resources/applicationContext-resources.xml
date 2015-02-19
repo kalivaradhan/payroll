@@ -28,10 +28,10 @@
     </bean>
 
     <bean id="sqlDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/payroll" />
-        <property name="username" value="root" />
-        <property name="password" value="welcome" />
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver" />
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:XE" />
+        <property name="username" value="SYSTEM" />
+        <property name="password" value="root" />
     </bean>
 
     <!-- JNDI DataSource for J2EE environments -->
